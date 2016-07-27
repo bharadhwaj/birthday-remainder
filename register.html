@@ -10,7 +10,7 @@
   <title> Birthday Remainder | Register  </title>
 
   <!-- Bootstrap core CSS -->
-  <!-- <link href="{{ url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet"> -->
+  <link href="static/css/bootstrap.css" rel="stylesheet"> 
   <link href="static/css/bootswatch.css" rel="stylesheet">
   <link href="static/css/styles.css" rel="stylesheet">
 <script src="static/js/jquery.js"></script>
@@ -35,6 +35,10 @@
 $(document).ready(function () {
    $("#password-confirm").keyup(checkPasswordMatch);
 });
+
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
   
   </script>  
 </head>
@@ -78,11 +82,6 @@ $(document).ready(function () {
               <div class="form-group">
                 <label for="password-confirm">CONFIRM PASSWORD</label>
                 <input type="password" class="form-control" name="password-confirm" placeholder="Confirm password" required>
-              </div>
-              <div class="form-group">
-                <label for="user_role">DATE OF BIRTH</label>
-                <input type="radio" name="user_role" id="user_role_radio1" value="student" checked> Student</input>
-                <input type="radio" name="user_role" id="user_role_radio1" value="teacher"> Teacher</input>
               </div>
 
               <button type="submit" class="btn btn-success" id="submit-button">Register</button>
