@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title> Birthday Remainder | Register  </title>
+
+  <!-- Bootstrap core CSS -->
+  <!-- <link href="{{ url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet"> -->
+  <link href="static/css/bootswatch.css" rel="stylesheet">
+  <link href="static/css/styles.css" rel="stylesheet">
+<script src="static/js/jquery.js"></script>
+  <link href="static/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+  <script src="static/js/bootstrap.min.js"></script>
+
+  <script src="static/js/fileinput.js" type="text/javascript"></script>
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="{{ url_for('static',filename='images/favicon.png') }}"/>
+  <script>
+  function checkPasswordMatch() {
+    var password = $("#password").val();
+    var confirmPassword = $("#password-confirm").val();
+
+    if (password != confirmPassword)
+        $("#divCheckPasswordMatch").html("Passwords do not match!");
+    else
+        $("#divCheckPasswordMatch").html("Passwords match.");
+  }
+
+$(document).ready(function () {
+   $("#password-confirm").keyup(checkPasswordMatch);
+});
+  
+  </script>  
+</head>
+
+<body style="padding-top: 70px;">
+  <div class="container">
+
+      <div class="row">
+
+
+
+       <div class="col-md-8 col-md-offset-2">
+         <h3>Register</h3>
+
+         <div class="panel panel-default">
+          <div class="panel-body">
+            <form id="form"  role="form" method="post">
+              <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+              <div class="form-group">
+                <label for="name">NAME</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter name" {{('value="%s"' %oldform['name'])|safe if retry}} required>
+              </div>
+              <div class="form-group">
+                <label for="email">EMAIL</label>
+                <input type="email" class="form-control" name="email" placeholder="Enter email" {{('value="%s"' %oldform['email'])|safe if retry}} required>
+              </div>
+             
+              <div class="form-group">
+                <label for="mobilenumber">MOBILE NUMBER</label>
+                <div class="input-group">
+                    <div class="input-group-addon">+91</div>
+                    <input class="form-control" type="text" name="mobilenumber"placeholder="Mobile number" {{('value="%s"' %oldform['mobilenumber'])|safe if retry}} required maxlength="10">
+                  </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password">PASSWORD</label>
+                <input type="password" class="form-control" name="password" placeholder="Enter password" required>
+              </div>
+
+              <div class="form-group">
+                <label for="password-confirm">CONFIRM PASSWORD</label>
+                <input type="password" class="form-control" name="password-confirm" placeholder="Confirm password" required>
+              </div>
+              <div class="form-group">
+                <label for="user_role">DATE OF BIRTH</label>
+                <input type="radio" name="user_role" id="user_role_radio1" value="student" checked> Student</input>
+                <input type="radio" name="user_role" id="user_role_radio1" value="teacher"> Teacher</input>
+              </div>
+
+              <button type="submit" class="btn btn-success" id="submit-button">Register</button>
+              <a id ="cancel-button" class="btn btn-warning" href="{{url_for('index')}}">
+                  Cancel </a>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+  </div>
+</div>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+  
+  </body>
+
+  </html>
