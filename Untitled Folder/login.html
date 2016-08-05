@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> Birthday Remainder | Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootswatch.css" rel="stylesheet">
+    <link href="static/css/signin.css" rel="stylesheet">
+
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static',filename='images/favicon.png') }}"/>
+  </head>
+  <style type="text/css">
+    .navbar-nav > li{
+      font-size: 14px;
+    }
+  </style>
+  <body style="padding-top: 70px;">
+
+    <div class="container">
+
+      <form class="form-signin" role="login" action="login" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" class="form-control" name="username" placeholder="User name" required autofocus>
+        <input type="password" class="form-control" name="password" placeholder="Password"  required>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+      </form>
+      
+      <div class = "row form-signin" style="padding-top:1em; padding-bottom:1em; font-size: 16px">
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ url_for('static', filename='js/jquery.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  </body>
+</html>
