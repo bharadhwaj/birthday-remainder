@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> Birthday Remainder | Login</title>
+  </head>
+  <style type="text/css">
+    .navbar-nav > li{
+      font-size: 14px;
+    }
+  </style>
+  <body>
+
+    <div class="container">      
+
+      <%= form_for(:session, url: login_path, html: {class: 'form-signin'}) do |f| %>
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <%= f.email_field :email, class: 'form-control', placeholder: 'example@example.com', required: true, autofocus: true%>
+        <%= f.password_field :password, class: 'form-control', required: true, placeholder: 'Password' %>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <% end %>
+
+      <div class = "row form-signin" style="padding-top:1em; padding-bottom:1em; font-size: 16px">
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ url_for('static', filename='js/jquery.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  </body>
+</html>
