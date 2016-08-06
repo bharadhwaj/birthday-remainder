@@ -1,23 +1,12 @@
+<% provide(:title, "Login")%>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<style type="text/css">
+  .navbar-nav > li{
+    font-size: 14px;
+  }
+</style>
 
-    <title> Birthday Remainder | Login</title>
-  </head>
-  <style type="text/css">
-    .navbar-nav > li{
-      font-size: 14px;
-    }
-  </style>
-  <body>
-
-    <div class="container">      
+<div class="container">      
 
       <%= form_for(:session, url: login_path, html: {class: 'form-signin'}) do |f| %>
         <h2 class="form-signin-heading">Please sign in</h2>
@@ -30,12 +19,4 @@
       <div class = "row form-signin" style="padding-top:1em; padding-bottom:1em; font-size: 16px">
       </div>
 
-    </div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{ url_for('static', filename='js/jquery.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
-  </body>
-</html>
+</div>

@@ -26,6 +26,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.action_mailer.perform_deliveries = false
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
@@ -51,4 +52,6 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  
+
 end

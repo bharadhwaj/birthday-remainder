@@ -13,8 +13,13 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="login">Login</a></li>
-        <li><a href="signup">Register</a></li>
+        <% if !logged_in %>
+          <li><a href="login">Login</a></li>
+          <li><a href="signup">Register</a></li>
+        <% else %>
+          <li><a href="logout">Logout</a></li>
+          <li><a href="#">Link2</a></li>
+        <% end %>
       </ul>
     </div>
   </div>

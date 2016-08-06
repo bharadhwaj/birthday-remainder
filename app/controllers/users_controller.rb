@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+	
 	# GET /users/1
   	# GET /users/1.json
 	def show
@@ -18,8 +18,9 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			log_in @user
-			flash[:success] = "New user created"
-			redirect_to root_path
+			#BirthdayMailer.send_birthday_mail(@user).deliver
+			flash[:success] = "You have succesfully signed in!"
+			redirect_to users_path	
 		else
 			render 'new'
 		end
