@@ -9,4 +9,8 @@ class User < ApplicationRecord
 				uniqueness: { case_sensitive: false }
 	has_secure_password
 	validates :password, presence: true, length: {minimum: 5}
+
+	def self.users_with_birthday
+		User.where("MONTH(dob) = ? and DAY(dob) = ?", Date.today.month, Date.today.day)
+	end
 end
