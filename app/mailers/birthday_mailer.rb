@@ -1,8 +1,8 @@
 class BirthdayMailer < ApplicationMailer
-	default from: 'example.com'
+	default from: 'birthdayremainder16@gmail.com'
 
 	def send_birthday_mail(user)
 		@user = user
-		mail(to: @user.email, subject: 'Testing Email')
+		mail(to: 'mailmeatanil94@gmail.com', subject: 'Testing Email')
 	end
 end

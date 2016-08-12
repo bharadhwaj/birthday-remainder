@@ -1,0 +1,306 @@
+I, [2016-08-07T19:21:03.867530 #14639]  INFO -- :   Rendering birthday_mailer/send_birthday_mail.html.erb within layouts/mailer
+I, [2016-08-07T19:21:03.874380 #14639]  INFO -- :   Rendered birthday_mailer/send_birthday_mail.html.erb within layouts/mailer (6.6ms)
+D, [2016-08-07T19:21:03.874554 #14639] DEBUG -- : BirthdayMailer#send_birthday_mail: processed outbound mail in 43.4ms
+I, [2016-08-07T19:22:04.038822 #14655]  INFO -- :   Rendering birthday_mailer/send_birthday_mail.html.erb within layouts/mailer
+I, [2016-08-07T19:22:04.047925 #14655]  INFO -- :   Rendered birthday_mailer/send_birthday_mail.html.erb within layouts/mailer (8.9ms)
+D, [2016-08-07T19:22:04.048119 #14655] DEBUG -- : BirthdayMailer#send_birthday_mail: processed outbound mail in 51.3ms
+I, [2016-08-07T19:25:03.120684 #15014]  INFO -- :   Rendering birthday_mailer/send_birthday_mail.html.erb within layouts/mailer
+I, [2016-08-07T19:25:03.122857 #15014]  INFO -- :   Rendered birthday_mailer/send_birthday_mail.html.erb within layouts/mailer (1.8ms)
+I, [2016-08-07T19:25:03.125979 #15014]  INFO -- :   Rendering birthday_mailer/send_birthday_mail.text.erb within layouts/mailer
+I, [2016-08-07T19:25:03.126326 #15014]  INFO -- :   Rendered birthday_mailer/send_birthday_mail.text.erb within layouts/mailer (0.2ms)
+D, [2016-08-07T19:25:03.315217 #15014] DEBUG -- : BirthdayMailer#send_birthday_mail: processed outbound mail in 235.8ms
+I, [2016-08-07T19:25:05.386018 #15014]  INFO -- : Sent mail to mailmeatanil94@gmail.com (2070.3ms)
+D, [2016-08-07T19:25:05.386548 #15014] DEBUG -- : Date: Sun, 07 Aug 2016 19:25:03 +0530
+From: birthdayremainder16@gmail.com
+To: mailmeatanil94@gmail.com
+Message-ID: <57a73db74f302_3aa63fb93d7fd13c80893@anil-pc.mail>
+Subject: Testing Email
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_57a73db74c872_3aa63fb93d7fd13c8072a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_57a73db74c872_3aa63fb93d7fd13c8072a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi 
+Sample mail sent using smtp.
+
+
+----==_mimepart_57a73db74c872_3aa63fb93d7fd13c8072a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi </h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_57a73db74c872_3aa63fb93d7fd13c8072a--
+
+I, [2016-08-07T19:26:03.515657 #15044]  INFO -- :   Rendering birthday_mailer/send_birthday_mail.html.erb within layouts/mailer
+I, [2016-08-07T19:26:03.518226 #15044]  INFO -- :   Rendered birthday_mailer/send_birthday_mail.html.erb within layouts/mailer (2.2ms)
+I, [2016-08-07T19:26:03.522140 #15044]  INFO -- :   Rendering birthday_mailer/send_birthday_mail.text.erb within layouts/mailer
+I, [2016-08-07T19:26:03.522673 #15044]  INFO -- :   Rendered birthday_mailer/send_birthday_mail.text.erb within layouts/mailer (0.3ms)
+D, [2016-08-07T19:26:03.707442 #15044] DEBUG -- : BirthdayMailer#send_birthday_mail: processed outbound mail in 232.1ms
+I, [2016-08-07T19:26:33.718860 #15044]  INFO -- : Sent mail to mailmeatanil94@gmail.com (30011.1ms)
+D, [2016-08-07T19:26:33.719387 #15044] DEBUG -- : Date: Sun, 07 Aug 2016 19:26:03 +0530
+From: birthdayremainder16@gmail.com
+To: mailmeatanil94@gmail.com
+Message-ID: <57a73df3ae0a7_3ac43f96e8f6f130387f@anil-pc.mail>
+Subject: Testing Email
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_57a73df3ac6eb_3ac43f96e8f6f1303799";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_57a73df3ac6eb_3ac43f96e8f6f1303799
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi 
+Sample mail sent using smtp.
+
+
+----==_mimepart_57a73df3ac6eb_3ac43f96e8f6f1303799
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi </h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_57a73df3ac6eb_3ac43f96e8f6f1303799--
+
+I, [2016-08-07T19:37:03.861952 #15977]  INFO -- :   Rendering birthday_mailer/send_birthday_mail.html.erb within layouts/mailer
+I, [2016-08-07T19:37:03.863877 #15977]  INFO -- :   Rendered birthday_mailer/send_birthday_mail.html.erb within layouts/mailer (1.6ms)
+I, [2016-08-07T19:37:03.867100 #15977]  INFO -- :   Rendering birthday_mailer/send_birthday_mail.text.erb within layouts/mailer
+I, [2016-08-07T19:37:03.867509 #15977]  INFO -- :   Rendered birthday_mailer/send_birthday_mail.text.erb within layouts/mailer (0.3ms)
+D, [2016-08-07T19:37:04.053877 #15977] DEBUG -- : BirthdayMailer#send_birthday_mail: processed outbound mail in 230.6ms
+I, [2016-08-07T19:37:09.222692 #15977]  INFO -- : Sent mail to mailmeatanil94@gmail.com (5168.5ms)
+D, [2016-08-07T19:37:09.223189 #15977] DEBUG -- : Date: Sun, 07 Aug 2016 19:37:04 +0530
+From: birthdayremainder16@gmail.com
+To: mailmeatanil94@gmail.com
+Message-ID: <57a74088ed45_3e693fd1d3be514c58056@anil-pc.mail>
+Subject: Testing Email
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_57a74088cdd4_3e693fd1d3be514c57915";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_57a74088cdd4_3e693fd1d3be514c57915
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi 
+Sample mail sent using smtp.
+
+
+----==_mimepart_57a74088cdd4_3e693fd1d3be514c57915
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi </h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_57a74088cdd4_3e693fd1d3be514c57915--
+
+I, [2016-08-07T19:38:03.439825 #15990]  INFO -- :   Rendering birthday_mailer/send_birthday_mail.html.erb within layouts/mailer
+I, [2016-08-07T19:38:03.445349 #15990]  INFO -- :   Rendered birthday_mailer/send_birthday_mail.html.erb within layouts/mailer (4.9ms)
+I, [2016-08-07T19:38:03.448506 #15990]  INFO -- :   Rendering birthday_mailer/send_birthday_mail.text.erb within layouts/mailer
+I, [2016-08-07T19:38:03.448959 #15990]  INFO -- :   Rendered birthday_mailer/send_birthday_mail.text.erb within layouts/mailer (0.3ms)
+D, [2016-08-07T19:38:03.633833 #15990] DEBUG -- : BirthdayMailer#send_birthday_mail: processed outbound mail in 281.6ms
+I, [2016-08-07T19:38:08.011587 #15990]  INFO -- : Sent mail to mailmeatanil94@gmail.com (4377.2ms)
+D, [2016-08-07T19:38:08.012066 #15990] DEBUG -- : Date: Sun, 07 Aug 2016 19:38:03 +0530
+From: birthdayremainder16@gmail.com
+To: mailmeatanil94@gmail.com
+Message-ID: <57a740c39c3f7_3e763faf45e4913c32631@anil-pc.mail>
+Subject: Testing Email
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_57a740c39a24f_3e763faf45e4913c32525";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_57a740c39a24f_3e763faf45e4913c32525
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi 
+Sample mail sent using smtp.
+
+
+----==_mimepart_57a740c39a24f_3e763faf45e4913c32525
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi </h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_57a740c39a24f_3e763faf45e4913c32525--
+
+I, [2016-08-07T20:22:03.478468 #17781]  INFO -- :   Rendering birthday_mailer/send_birthday_mail.html.erb within layouts/mailer
+I, [2016-08-07T20:22:03.480165 #17781]  INFO -- :   Rendered birthday_mailer/send_birthday_mail.html.erb within layouts/mailer (1.5ms)
+I, [2016-08-07T20:22:03.483183 #17781]  INFO -- :   Rendering birthday_mailer/send_birthday_mail.text.erb within layouts/mailer
+I, [2016-08-07T20:22:03.483546 #17781]  INFO -- :   Rendered birthday_mailer/send_birthday_mail.text.erb within layouts/mailer (0.2ms)
+D, [2016-08-07T20:22:03.674149 #17781] DEBUG -- : BirthdayMailer#send_birthday_mail: processed outbound mail in 232.9ms
+I, [2016-08-07T20:22:05.686220 #17781]  INFO -- : Sent mail to mailmeatanil94@gmail.com (2011.7ms)
+D, [2016-08-07T20:22:05.686667 #17781] DEBUG -- : Date: Sun, 07 Aug 2016 20:22:03 +0530
+From: birthdayremainder16@gmail.com
+To: mailmeatanil94@gmail.com
+Message-ID: <57a74b13a604d_45753f8cf1f931304806f@anil-pc.mail>
+Subject: Testing Email
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_57a74b13a4462_45753f8cf1f93130479ee";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_57a74b13a4462_45753f8cf1f93130479ee
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi 
+Sample mail sent using smtp.
+
+
+----==_mimepart_57a74b13a4462_45753f8cf1f93130479ee
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi </h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_57a74b13a4462_45753f8cf1f93130479ee--
+
