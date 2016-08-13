@@ -10,7 +10,7 @@
 
       <%= form_for(:session, url: login_path, html: {class: 'form-signin'}) do |f| %>
         <h2 class="form-signin-heading">Please sign in</h2>
-        <%= f.email_field :email, class: 'form-control', placeholder: 'example@example.com', required: true, autofocus: true%>
+        <%= f.email_field :email, class: 'form-control', placeholder: 'name@example.com', required: true, autofocus: true%>
         <%= f.password_field :password, class: 'form-control', required: true, placeholder: 'Password' %>
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
