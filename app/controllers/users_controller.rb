@@ -11,18 +11,25 @@ class UsersController < ApplicationController
 
 	# GET /users/new
 	def new
-		@user = User.new
+		if logged_in
+	      flash_message :info, "You are already logged in!"
+	      redirect_to root_path
+	    else
+			@user = User.new
+		end
 	end
 
 	def create
 		@user = User.new(user_params)
 		if @user.save
 			log_in @user
-			#BirthdayMailer.send_birthday_mail(@user).deliver
-			flash[:success] = "You have succesfully signed in!"
-			redirect_to users_path	
+			flash_message :success, "You have succesfully signed in!"
+			redirect_to root_path	
 		else
-			render 'new'
+			@user.errors.full_messages.each do |message|
+				flash_message :danger, message
+			end
+			redirect_to signup_path
 		end
 	end
 

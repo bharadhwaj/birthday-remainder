@@ -11,6 +11,10 @@ class User < ApplicationRecord
 	validates :password, presence: true, length: {minimum: 5}
 
 	def self.users_with_birthday
-		User.where("MONTH(dob) = ? and DAY(dob) = ?", Date.today.month, Date.today.day)
+		# mysql query to retrieve users with today as birthday
+		# User.where("MONTH(dob) = ? and DAY(dob) = ?", Date.today.month, Date.today.day)
+
+		#SQLite query to retrieve users with today as birthday
+		User.where("cast(strftime('%m', dob) as int) = ? and cast(strftime('%d', dob) as int) = ?", Date.today.month, Date.today.day)
 	end
 end

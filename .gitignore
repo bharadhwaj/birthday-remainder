@@ -1,2 +1,4 @@
 *~
 config/secret.yml
+log/development.log
+tmp/pids/server.pid
