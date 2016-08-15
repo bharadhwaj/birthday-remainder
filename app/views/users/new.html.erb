@@ -22,7 +22,6 @@ $(document).ready(function () {
   </script>  
 
   <div class="container">
-      <%= render 'shared/error_messages' %>
       <div class="row">
       <div class="col-md-8 col-md-offset-2">
          <h3>Register</h3>
@@ -57,7 +56,7 @@ $(document).ready(function () {
               </div>
 
               <button type="submit" class="btn btn-success" id="submit-button">Register</button>
-              <a id ="cancel-button" class="btn btn-warning" href="{{url_for('index')}}">
+              <a id ="cancel-button" class="btn btn-warning" href="/">
                   Cancel </a>
             <% end %>
 

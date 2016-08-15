@@ -3,11 +3,11 @@
 			<div class="col-md-8 col-md-offset-2">
 
 				<div class="panel-heading">
-				  <a class="btn btn-default btn-lg btn-block" href="#">View all Birthdays</a>
+				  <a class="btn btn-default btn-lg btn-block" href="friends">View all Birthdays</a>
 				</div>
 
 				<div class="panel-heading">
-				  <a class="btn btn-default btn-lg btn-block" href="#">Add new Birthday</a>
+				  <a class="btn btn-default btn-lg btn-block" href="friends/new">Add new Birthday</a>
 				</div>
 				
 				<div class="panel-group" id="accordion">
@@ -19,14 +19,13 @@
         		<div class="panel panel-default">
         		  <div id="collapseOne" class="panel-collapse collapse">
             	  <div class="panel-body">
-                  <form class="form-signin" role="login" action="" method="post">
-                    <input type="hidden" name="name" value="edit_employee">
+                  <%= form_for(@friend, url: edit_path, html: {class: 'form-signin'}) do |f| %>
                     <label  for="year">PERSON ID</label>
                     <div>
-                      <input type="text" class="form-control" name="empid" placeholder="Enter the person ID" required autofocus><br/>
+                      <input type="text" class="form-control" name="id" placeholder="Enter the person ID" required autofocus><br/>
                     </div> 
                     <button class="btn btn-lg btn-success btn-block" type="submit">Submit</button>
-                  </form>
+                  <% end %>
                 </div>
               </div>
             </div>
