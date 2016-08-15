@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>EMPLOYEES </title>
+
+  <!-- <link type = "text/css" href="static/css/bootstrap.css" rel="stylesheet" --> 
+  <link href="{{ url_for('static', filename='css/bootswatch.css')}}" rel="stylesheet">
+  <!-- <link href="{{ url_for('static', filename='css/jquery.dataTables.css')}}" rel="stylesheet"> -->
+  <link href="{{ url_for('static', filename='css/dataTables.bootstrap.css')}}" rel="stylesheet">
+  <link type = "text/css" href="static/css/styles.css" rel="stylesheet">
+
+
+</head>
+
+<body style="padding-top: 70px;">
+{% include 'navbar.html' %}
+ <div class="container">
+
+  <div class="row">
+<div class="col-md-10 col-md-offset-1">
+    <h3>Employees</h3>
+    <h4><a href="{{url_for('register')}}">Add new employee</a></h4>
+    <table id="empTable" class="table table-hover">
+    <thead>
+                <tr>
+                  <th>ID</th>
+                  
+                  <th> Name </th>
+                  <th >Department</th>
+                  <th >Designation</th>
+                  <th >Scheme</th>
+                  <th >Bank Name</th>
+                  <th >Basic Pay</th>
+                </tr>
+    </thead>
+    <tbody>
+                 {% for emp in employees %}
+                <tr>
+                
+                <td><a href="{{url_for('editemp',empid=emp.empid)}}">{{emp.empid}}</a></td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.department}}</td>
+                <td>{{emp.designation}}</td>
+                <td>{{emp.scheme}}</td>
+                <td>{{emp.bank_name}}</td>
+                <td>{{emp.basic_pay}}</td>
+                
+                </tr>
+                {% endfor %}
+  </table>
+
+   </div>
+ </div>
+</div>
+<script src="{{ url_for('static', filename='js/jquery.js')}}"></script>
+<script src="{{ url_for('static', filename='js/jquery.dataTables.js')}}"></script>
+<script src="{{ url_for('static', filename='js/dataTables.bootstrap.js')}}"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#empTable').DataTable();
+});
+</script>
+</body>
+</html>
