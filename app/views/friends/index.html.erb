@@ -1,0 +1,7 @@
+<% if @friends.nil? %>
+	No friends found
+<% else %>
+	<% @friends.each do |friend| %>
+		<%= "Name: " + friend.name + " --- Birthday: " %> <%= friend.dob%> <br>
+	<% end %>
+<% end %>

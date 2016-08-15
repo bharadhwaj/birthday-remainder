@@ -1,0 +1,6 @@
+<%= form_for(@friend) do |f| %>
+	<%= f.text_field :name %><br>
+	<%= f.email_field :email %>
+	<%= f.date_field :dob %>
+	<input type="submit" value="update">
+<% end %>

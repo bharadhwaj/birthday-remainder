@@ -1,9 +1,8 @@
 class SessionsController < ApplicationController
+  before_action :is_logged_in, only: [:new]
+  before_action :is_logged_out, only: [:destroy]
+
   def new
-    if logged_in
-      flash_message :info, "You are already logged in!"
-      redirect_to root_path
-    end
   end
 
   def create
@@ -19,13 +18,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    if !logged_in
-      flash_message :warning, "Please log in and continue!"
-      redirect_to login_path
-    else
       log_out
       flash_message :success, "You have successfully logged out!"
       redirect_to login_path
-    end
   end
 end

@@ -10,6 +10,20 @@ module SessionsHelper
 	def logged_in
 		!current_user.nil?
 	end
+
+	def is_logged_in
+		if logged_in
+	      flash_message :info, "You are already logged in!"
+	      redirect_to root_path
+	  	end
+	end
+
+	def is_logged_out
+		if !logged_in
+      		flash_message :warning, "Please log in and continue!"
+      		redirect_to login_path
+	  	end
+	end
 	
 	def log_out
 	    session.delete(:user_id)

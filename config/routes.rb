@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
+  post '/edit', to: 'friends#search'
   resources :users
+  resources :friends
 end

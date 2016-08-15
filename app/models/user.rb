@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	has_many :friends
 	before_save { email.downcase! }
 	validates :name, presence: true, length: {maximum: 30}
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -8,7 +9,7 @@ class User < ApplicationRecord
 				format: { with: VALID_EMAIL_REGEX},
 				uniqueness: { case_sensitive: false }
 	has_secure_password
-	validates :password, presence: true, length: {minimum: 5}
+	validates :password, presence: true
 
 	def self.users_with_birthday
 		# mysql query to retrieve users with today as birthday

@@ -1,8 +1,7 @@
 class StaticPagesController < ApplicationController
+	before_action :is_logged_out, only: [:index]
+	
 	def index
-		if !logged_in
-			flash_message :warning, "Please log in and continue!!"
-			redirect_to login_path
-		end
+		@friend = Friend.new
 	end
 end

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-	
+	before_action :is_logged_in, only: [:new]
+
 	# GET /users/1
   	# GET /users/1.json
 	def show
@@ -11,12 +12,7 @@ class UsersController < ApplicationController
 
 	# GET /users/new
 	def new
-		if logged_in
-	      flash_message :info, "You are already logged in!"
-	      redirect_to root_path
-	    else
-			@user = User.new
-		end
+		@user = User.new
 	end
 
 	def create
@@ -32,7 +28,7 @@ class UsersController < ApplicationController
 			redirect_to signup_path
 		end
 	end
-
+	
 	private
 		def user_params
 	      params.require(:user).permit(:name, :email, :dob, :password, :password_confirmation)
