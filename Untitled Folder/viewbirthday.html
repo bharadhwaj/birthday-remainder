@@ -7,12 +7,12 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>EMPLOYEES </title>
+  <title>Birthday Remainder </title>
 
   <!-- <link type = "text/css" href="static/css/bootstrap.css" rel="stylesheet" --> 
-  <link href="{{ url_for('static', filename='css/bootswatch.css')}}" rel="stylesheet">
+  <link href="static/css/bootswatch.css" rel="stylesheet">
   <!-- <link href="{{ url_for('static', filename='css/jquery.dataTables.css')}}" rel="stylesheet"> -->
-  <link href="{{ url_for('static', filename='css/dataTables.bootstrap.css')}}" rel="stylesheet">
+  <link href="static/css/dataTables.bootstrap.css" rel="stylesheet">
   <link type = "text/css" href="static/css/styles.css" rel="stylesheet">
 
 
@@ -24,43 +24,40 @@
 
   <div class="row">
 <div class="col-md-10 col-md-offset-1">
-    <h3>Employees</h3>
-    <h4><a href="{{url_for('register')}}">Add new employee</a></h4>
+    <h3>List birthdays</h3>
+    <h4><a href="#">Add new birthday</a></h4>
     <table id="empTable" class="table table-hover">
     <thead>
                 <tr>
                   <th>ID</th>
                   
                   <th> Name </th>
-                  <th >Department</th>
-                  <th >Designation</th>
-                  <th >Scheme</th>
-                  <th >Bank Name</th>
-                  <th >Basic Pay</th>
+                  <th >email ID</th>
+                  <th >Date of Birth</th>
+                  <th ></th>
+                  <th ></th>
                 </tr>
     </thead>
     <tbody>
-                 {% for emp in employees %}
                 <tr>
                 
-                <td><a href="{{url_for('editemp',empid=emp.empid)}}">{{emp.empid}}</a></td>
+                <td><a href="#">{{emp.empid}}</a></td>
                 <td>{{emp.name}}</td>
-                <td>{{emp.department}}</td>
-                <td>{{emp.designation}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.dateofbirth}}</td>
                 <td>{{emp.scheme}}</td>
                 <td>{{emp.bank_name}}</td>
                 <td>{{emp.basic_pay}}</td>
                 
                 </tr>
-                {% endfor %}
   </table>
 
    </div>
  </div>
 </div>
-<script src="{{ url_for('static', filename='js/jquery.js')}}"></script>
-<script src="{{ url_for('static', filename='js/jquery.dataTables.js')}}"></script>
-<script src="{{ url_for('static', filename='js/dataTables.bootstrap.js')}}"></script>
+<script src="static/s/jquery.js"></script>
+<script src="static/js/jquery.dataTables.js"></script>
+<script src="static/js/dataTables.bootstrap.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
     $('#empTable').DataTable();
