@@ -1,0 +1,63 @@
+<% provide(:title, "Signup")%>
+
+  <script>
+  function checkPasswordMatch() {
+    var password = $("#password").val();
+    var confirmPassword = $("#password-confirm").val();
+
+    if (password != confirmPassword)
+        $("#divCheckPasswordMatch").html("Passwords do not match!");
+    else
+        $("#divCheckPasswordMatch").html("Passwords match.");
+  }
+
+$(document).ready(function () {
+   $("#password-confirm").keyup(checkPasswordMatch);
+});
+
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  
+  </script>  
+
+  <div class="container">
+      <%= render 'shared/error_messages' %>
+      <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+         <h3>Register</h3>
+
+         <div class="panel panel-default">
+          <div class="panel-body">
+            <%= form_for(@user) do |f| %>
+              <div class="form-group">
+                <label> Name </label>
+                <input type="text" name="user[name]"  class="form-control"  placeholder="Enter your name"required >
+                
+              </div>
+              <div class="form-group">
+                <label> Email </label>
+                <input type="email" name="user[email]" class="form-control" placeholder="name@example.com" required>
+                 
+              </div>
+              <div class="form-group">
+                <label> New Date of Birth </label>
+                <input type="date" name="user[dob]" class="form-control" placeholder="MM/DD/YYYY" required>
+               
+              </div>
+              <div class="form-group">
+                <label> Password </label>
+                <input type="password" name="user[password]"  class="form-control" placeholder="Enter password" required>
+                
+              </div>
+
+              <button type="submit" class="btn btn-success" id="submit-button">Update</button>
+              <a id ="cancel-button" class="btn btn-warning" href="{{url_for('index')}}">
+                  Cancel </a>
+            <% end %>
+
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
