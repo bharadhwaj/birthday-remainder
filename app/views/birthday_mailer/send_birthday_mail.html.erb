@@ -4,9 +4,12 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Hi <%= @user.name %></h1>
+    <p> Hi <strong> <%= @friend.name %> </strong> </p>
     <p>
-      Anil and bharadhwaj wish you a very happy birthday.!
+      <%= @friend.birthday_message %>
+      <br><br><br>
+      Regards <br>
+      <%= @friend.user.name %>
     </p>
   </body>
 </html>

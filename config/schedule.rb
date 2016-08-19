@@ -19,6 +19,7 @@
 # Learn more: http://github.com/javan/whenever
 
 # Code to send birthday wishes
+
 # env :PATH, ENV['PATH']
 # set :output, "#{path}/log/cron.log"
 # every :day, :at => '12:05 am' do

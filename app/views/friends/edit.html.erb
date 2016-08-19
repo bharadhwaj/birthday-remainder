@@ -1,6 +1,31 @@
-<%= form_for(@friend) do |f| %>
-	<%= f.text_field :name %><br>
-	<%= f.email_field :email %>
-	<%= f.date_field :dob %>
-	<input type="submit" value="update">
-<% end %>
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+         <div class="panel panel-default">
+          <div class="panel-body">
+            <%= form_for(@friend) do |f| %>
+              <div class="form-group">
+                <label> Name </label>
+                <%= f.text_field :name, class: "form-control", placeholder: "Enter your name", required: true %>
+              </div>
+              <div class="form-group">
+                <label> Email </label>
+                <%= f.email_field :email, class: "form-control", placeholder: "name@example.com", required: true %>
+              </div>
+              <div class="form-group">
+                <label> New Date of Birth </label>
+               	<%= f.date_field :dob,  class: "form-control", placeholder: "MM/DD/YYYY", required: true %>
+              </div>
+              <div class="form-group">
+                <label> Birthday message </label>
+               	<%= f.text_field :birthday_message,  class: "form-control" %>
+              </div>
+              <button type="submit" class="btn btn-success" id="submit-button">Update</button>
+              <a id ="cancel-button" class="btn btn-warning" href="<%= root_path %>">
+                  Cancel </a>
+            <% end %>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

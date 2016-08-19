@@ -1,5 +1,8 @@
-<div class="panel panel-default">
-          <div class="panel-body">
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+        <div class="panel-body">
             <%= form_for(@friend) do |f| %>
               <div class="form-group">
                 <label> Name </label>
@@ -16,6 +19,11 @@
                 <input type="date" name="friend[dob]" class="form-control" placeholder="MM/DD/YYYY" required>
                
               </div>
+
+              <div class="form-group">
+                <label> Birthday Message </label>
+                <input type="text" name="friend[birthday_message]" class="form-control" placeholder="Wish you many many happy returns of the day.!">
+              </div>
               
               <button type="submit" class="btn btn-success" id="submit-button">Register</button>
               <a id ="cancel-button" class="btn btn-warning" href="/">
@@ -24,3 +32,6 @@
 
           </div>
         </div>
+    </div>
+  </div>
+</div>

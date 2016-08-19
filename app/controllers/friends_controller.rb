@@ -1,4 +1,5 @@
 class FriendsController < ApplicationController
+	before_action :set_friend, only: [:edit, :update, :destroy]
 	def index
 		@friends = Friend.where(user_id: session[:user_id])
 	end
@@ -23,17 +24,13 @@ class FriendsController < ApplicationController
 	end
 
 	def edit
-		@friend = Friend.find(params[:id])
 	end
 
 	def search
-		# @friend = Friend.find(params[:id])
-		# render 'edit'
 		redirect_to edit_friend_path(params[:id])
 	end
 
 	def update
-		@friend = Friend.find(params[:id])
 		if @friend.update(friend_params)
 			flash_message :success, "User details updated successfully.!"
 			redirect_to root_path
@@ -43,12 +40,18 @@ class FriendsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@friend.destroy
+		flash_message :success, "User deleted successfully.!"
+		redirect_to friends_path
+	end
+
 	private
-		def friend_params
-			params.require(:friend).permit(:name, :dob, :email)
+		def set_friend
+			@friend = Friend.find(params[:id])
 		end
 
-		def friend_id
-			params.require(:friend).permit(:id)
+		def friend_params
+			params.require(:friend).permit(:name, :dob, :email, :birthday_message)
 		end
 end

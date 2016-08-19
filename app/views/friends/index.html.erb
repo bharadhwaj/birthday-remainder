@@ -1,7 +1,40 @@
-<% if @friends.nil? %>
-	No friends found
-<% else %>
-	<% @friends.each do |friend| %>
-		<%= "Name: " + friend.name + " --- Birthday: " %> <%= friend.dob%> <br>
-	<% end %>
-<% end %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+		    <h4><a href="<%= new_friend_path %>" class="btn btn-warning">Add new birthday</a></h4>
+				<center> <h3> All friends </h3> </center>
+			    <table id="empTable" class="table table-hover">
+			    <thead>
+			                <tr>
+			                  <th> Name </th>
+			                  <th >email ID</th>
+			                  <th >Date of Birth</th>
+			                  <th> Birthday Message </th>
+			                  <th></th>
+			                  <th></th>
+			                </tr>
+			    </thead>
+			    <tbody>
+			    	<% @friends.each do |friend| %>
+			            <tr>
+				            <td> <%= friend.name %> </td>
+				            <td> <%= friend.email %> </td>
+				            <td> <%= friend.dob %> </td>
+				            <td> <%= friend.birthday_message %> </td>
+				            <td>
+				            	<a href="<%= edit_friend_path(friend) %>" class="btn btn-success"> Edit </a>
+				            </td>
+				            <td>
+				            	<%= link_to "Delete", friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+				            </td>
+			            </tr>
+			        <% end %>
+			  	</table>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#empTable').DataTable();
+});
+</script>

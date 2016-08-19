@@ -11,11 +11,4 @@ class User < ApplicationRecord
 	has_secure_password
 	validates :password, presence: true
 
-	def self.users_with_birthday
-		# mysql query to retrieve users with today as birthday
-		# User.where("MONTH(dob) = ? and DAY(dob) = ?", Date.today.month, Date.today.day)
-
-		#SQLite query to retrieve users with today as birthday
-		User.where("cast(strftime('%m', dob) as int) = ? and cast(strftime('%d', dob) as int) = ?", Date.today.month, Date.today.day)
-	end
 end
