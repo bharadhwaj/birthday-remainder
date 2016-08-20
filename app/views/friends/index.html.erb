@@ -18,11 +18,11 @@
 			    <tbody>
 			    	<% @friends.each do |friend| %>
 			            <tr>
-			            	<td>  </td>
+			            	<td> <%= friend.id %> </td>
 				            <td> <%= friend.name %> </td>
 				            <td> <%= friend.email %> </td>
 				            <td> <%= friend.dob %> </td>
-				            <td> <%= friend.birthday_message %> </td>
+				            <td> <%= friend.birthday_message[0..16] + "..." %> </td>
 				            <td>
 				            	<a href="<%= edit_friend_path(friend) %>" class="btn btn-success"> Edit </a>
 				            </td>

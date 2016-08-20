@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   post '/edit', to: 'friends#search'
   resources :users
   resources :friends
+  match "*path", to: 'static_pages#page_not_found', via: :all
 end

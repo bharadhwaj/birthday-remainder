@@ -4,4 +4,8 @@ class StaticPagesController < ApplicationController
 	def index
 		@friend = Friend.new
 	end
+
+	def page_not_found
+		render 'public/404'
+	end
 end

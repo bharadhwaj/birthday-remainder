@@ -24,6 +24,10 @@ class FriendsController < ApplicationController
 	end
 
 	def edit
+		if @friend.blank?
+			flash_message :danger, "User ID not found!"
+			redirect_to root_path
+		end
 	end
 
 	def search
@@ -48,7 +52,8 @@ class FriendsController < ApplicationController
 
 	private
 		def set_friend
-			@friend = Friend.find(params[:id])
+			print "\n\n\n\n\n >>>>>>>>" + params[:id] + "\n\n\n"
+			@friend = Friend.find_by_id(params[:id])
 		end
 
 		def friend_params
