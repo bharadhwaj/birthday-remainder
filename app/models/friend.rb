@@ -25,6 +25,6 @@ class Friend < ApplicationRecord
 	end
 
 	def set_default_values
-		self.birthday_message = "Many many happy returns of the day.!!" if self.birthday_message.blank?
+		self.birthday_message = "Wish you a very happy birthday! Have a great year ahead!" if self.birthday_message.blank?
 	end
 end

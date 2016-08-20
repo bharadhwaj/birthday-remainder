@@ -6,9 +6,10 @@
 			    <table id="empTable" class="table table-hover">
 			    <thead>
 			                <tr>
+			                  <th> # </th>
 			                  <th> Name </th>
-			                  <th >email ID</th>
-			                  <th >Date of Birth</th>
+			                  <th> Email ID</th>
+			                  <th> Date of Birth</th>
 			                  <th> Birthday Message </th>
 			                  <th></th>
 			                  <th></th>
@@ -17,6 +18,7 @@
 			    <tbody>
 			    	<% @friends.each do |friend| %>
 			            <tr>
+			            	<td>  </td>
 				            <td> <%= friend.name %> </td>
 				            <td> <%= friend.email %> </td>
 				            <td> <%= friend.dob %> </td>
