@@ -12,7 +12,7 @@ class FriendsController < ApplicationController
 		@friend = Friend.new(friend_params)
 		@friend.user_id = session[:user_id]
 		if @friend.save
-			flash_message :success, "New friend successfully addedd!"
+			flash_message :success, "New friend successfully added!"
 			redirect_to root_path	
 		else
 			@friend.errors.full_messages.each do |message|
@@ -32,17 +32,17 @@ class FriendsController < ApplicationController
 
 	def update
 		if @friend.update(friend_params)
-			flash_message :success, "User details updated successfully.!"
+			flash_message :success, "User details updated successfully!"
 			redirect_to root_path
 		else
-			flash_message :danger, "Updation failed.!"
+			flash_message :danger, "Updation failed!"
 			render 'edit'
 		end
 	end
 
 	def destroy
 		@friend.destroy
-		flash_message :success, "User deleted successfully.!"
+		flash_message :success, "User deleted successfully!"
 		redirect_to friends_path
 	end
 

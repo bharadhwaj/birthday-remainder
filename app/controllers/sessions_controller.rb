@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       flash_message :success, "You have successfully logged in!"
   		redirect_to root_path
   	else
-  		flash_message_now :danger, "Invalid email/password combination"
+  		flash_message_now :warning, "Invalid Email ID - Password combination."
   		render 'new'
   	end
   end

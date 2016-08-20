@@ -20,7 +20,7 @@ module SessionsHelper
 
 	def is_logged_out
 		if !logged_in
-      		flash_message :warning, "Please log in and continue!"
+      		flash_message :warning, "Please log in to continue!"
       		redirect_to login_path
 	  	end
 	end
