@@ -12,7 +12,7 @@ class FriendsController < ApplicationController
 		@friend = Friend.new(friend_params)
 		@friend.user_id = session[:user_id]
 		if @friend.save
-			flash_message :success, "New friend successfully added!"
+			flash_message :success, "New friend added successfully!"
 			redirect_to root_path	
 		else
 			@friend.errors.full_messages.each do |message|
