@@ -27,38 +27,11 @@
 				            	<a href="<%= edit_friend_path(friend) %>" class="btn btn-success"> Edit </a>
 				            </td>
 				            <td>
-<a href="" class="btn btn-danger" data-toggle="modal" data-target="#delModal">Delete</a>
-
-<div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">Delete User</h4>
-        <hr>
-      </div>
-      <div class="modal-body">
-        Are you sure you want to remove user, "<%= friend.name %>"?
-      </div>
-      <div class="modal-footer">
-      <form method="post">
-        <input type="hidden" name="formtype" value="delpost">
-        <button type="submit" class="btn btn-primary">Yes</button>
-        <button type="button" class="btn" data-dismiss="modal">No</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
 				            	<%= link_to "Delete", friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
 				            </td>
 			            </tr>
 			        <% end %>
 			  	</table>
-
-
-
-
 		</div>
 	</div>
 </div>
