@@ -1,4 +1,5 @@
 *~
-config/secret.yml
-log/development.log
-tmp/pids/server.pid
+/config/secret.yml
+/log/*
+/tmp/*
+/db/schema.rb
