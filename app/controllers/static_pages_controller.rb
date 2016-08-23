@@ -6,6 +6,5 @@ class StaticPagesController < ApplicationController
 	end
 
 	def page_not_found
-		render 'public/404'
 	end
 end

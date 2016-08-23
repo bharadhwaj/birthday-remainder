@@ -10,23 +10,24 @@ $.rails.confirmed = (link) ->
  $.rails.showConfirmDialog = (link) ->
   message = link.attr 'data-confirm'
   html = """
-         <div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-hidden="true">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h4 class="modal-title" id="myModalLabel">Delete User</h4>
-		        <hr>
-		      </div>
-		      <div class="modal-body">
-		        Are you sure you want to remove user?
-		      </div>
-		      <div class="modal-footer">
-			      <a data-dismiss="modal" class="btn">Cancel</a>
-	             <a data-dismiss="modal" class="btn btn-primary confirm">OK</a>
-		      </div>
-		    </div>
-		  </div>
-		</div>
+	         <div class="modal" id="confirmationDialog"  tabindex="-1" role="dialog" aria-hidden="true">
+	         	<div class="modal-dialog">
+			    	<div class="modal-content">
+	           			<div class="modal-header">
+	             			<a class="close" data-dismiss="modal">×</a>
+	             			<h4 class="modal-title">Delete User</h4>
+			        		<hr>
+	           			</div>
+			           <div class="modal-body">
+			             #{message}
+			           </div>
+			           <div class="modal-footer">
+			             <a data-dismiss="modal" class="btn">Cancel</a>
+			             <a data-dismiss="modal" class="btn btn-primary confirm">OK</a>
+			           </div>
+	           		</div>
+	           	</div>
+	         </div>
          """
   $(html).modal()
-  $('#delModal .confirm').on 'click', -> $.rails.confirmed(link)
+  $('#confirmationDialog a.confirm').on 'click', -> $.rails.confirmed(link)
