@@ -1,12 +1,6 @@
 class UsersController < ApplicationController
 	before_action :is_logged_in, only: [:new]
 
-	# GET /users/1
-  	# GET /users/1.json
-	def show
-		@user = User.find(params[:id])
-	end
-
 	def index
 	end
 

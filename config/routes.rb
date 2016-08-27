@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
   post '/edit', to: 'friends#search'
-  resources :users
-  resources :friends
+  resources :users, :except => [:edit, :update, :destroy, :show]
+  resources :friends, :except => [:show]
   match "*path", to: 'static_pages#page_not_found', via: :all
 end
