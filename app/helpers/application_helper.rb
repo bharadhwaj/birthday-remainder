@@ -25,6 +25,8 @@ module ApplicationHelper
 				messages.each do |message|
 					flash_array << render(partial: 'shared/flash', locals: {:message_type => message_type, :message => message})
 				end
+			else
+				flash_array << render(partial: 'shared/flash', locals: {:message_type => message_type, :message => messages})
 			end
 		end
 		flash_array.join('').html_safe

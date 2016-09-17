@@ -15,6 +15,12 @@
             <a data-toggle="collapse" data-parent="#accordion" class="btn btn-default btn-lg btn-block" href="#collapseOne">Edit Person details</a>
       		</div>
 
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $('#id').regexMask(/^\d+$/);
+            });
+          </script>
+
           <div class="col-md-6 col-md-offset-3">
         		<div class="panel panel-default">
         		  <div id="collapseOne" class="panel-collapse collapse">
@@ -22,7 +28,7 @@
                   <%= form_for(@friend, url: edit_path, html: {class: 'form-signin'}) do |f| %>
                     <label  for="year">PERSON ID</label>
                     <div>
-                      <input type="text" class="form-control" name="id" placeholder="Enter the person ID" required autofocus><br/>
+                      <input type="number" class="form-control" id="id" name="id" placeholder="Enter the person ID" required autofocus><br/>
                     </div> 
                     <button class="btn btn-lg btn-success btn-block" type="submit">Submit</button>
                   <% end %>

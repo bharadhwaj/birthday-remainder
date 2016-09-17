@@ -13,14 +13,14 @@ module SessionsHelper
 
 	def is_logged_in
 		if logged_in
-	      flash_message :info, "You are already logged in!"
+	      flash[:info] = "You are already logged in!"
 	      redirect_to root_path
 	  	end
 	end
 
 	def is_logged_out
 		if !logged_in
-      		flash_message :warning, "Please log in to continue!"
+      		flash[:warning] = "Please log in to continue!"
       		redirect_to login_path
 	  	end
 	end

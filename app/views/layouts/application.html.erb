@@ -14,7 +14,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-  	<%= render 'shared/navbar' %>
+  	<%= render 'shared/navbar' unless @navbar_disabled %>
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">

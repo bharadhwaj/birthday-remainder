@@ -1,5 +1,7 @@
 class FriendsController < ApplicationController
 	before_action :set_friend, only: [:edit, :update, :destroy]
+	before_action :is_logged_out
+
 	def index
 		@friends = Friend.where(user_id: session[:user_id])
 	end
@@ -12,7 +14,7 @@ class FriendsController < ApplicationController
 		@friend = Friend.new(friend_params)
 		@friend.user_id = session[:user_id]
 		if @friend.save
-			flash_message :success, "New friend added successfully!"
+			flash[:success] = "New friend added successfully!"
 			redirect_to root_path	
 		else
 			@friend.errors.full_messages.each do |message|
@@ -25,7 +27,7 @@ class FriendsController < ApplicationController
 
 	def edit
 		if @friend.blank?
-			flash_message :danger, "User ID not found!"
+			flash[:danger] = "User ID not found!"
 			redirect_to root_path
 		end
 	end
@@ -36,17 +38,17 @@ class FriendsController < ApplicationController
 
 	def update
 		if @friend.update(friend_params)
-			flash_message :success, "User details updated successfully!"
+			flash[:success] = "User details updated successfully!"
 			redirect_to root_path
 		else
-			flash_message :danger, "Updation failed!"
+			flash[:danger] = "Updation failed!"
 			render 'edit'
 		end
 	end
 
 	def destroy
 		@friend.destroy
-		flash_message :success, "User deleted successfully!"
+		flash[:success] = "User deleted successfully!"
 		redirect_to friends_path
 	end
 

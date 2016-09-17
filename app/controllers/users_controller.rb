@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			log_in @user
-			flash_message :success, "You have succesfully signed in!"
+			flash[:success] = "You have succesfully signed in!"
 			redirect_to root_path	
 		else
 			@user.errors.full_messages.each do |message|
@@ -25,6 +25,6 @@ class UsersController < ApplicationController
 	
 	private
 		def user_params
-	      params.require(:user).permit(:name, :email, :dob, :password, :password_confirmation)
+	      params.require(:user).permit(:name, :email, :password, :password_confirmation)
 	    end
 end

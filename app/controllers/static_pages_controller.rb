@@ -6,5 +6,6 @@ class StaticPagesController < ApplicationController
 	end
 
 	def page_not_found
+		@navbar_disabled = true
 	end
 end
